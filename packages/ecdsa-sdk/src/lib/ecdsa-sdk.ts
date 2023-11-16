@@ -314,7 +314,7 @@ function getUint8Memory0() {
   return cachedUint8Memory0;
 }
 
-const cachedTextEncoder = new TextEncoder('utf-8');
+const cachedTextEncoder = new TextEncoder();
 
 const encodeString =
   typeof cachedTextEncoder.encodeInto === 'function'
@@ -396,7 +396,7 @@ function takeObject(idx) {
   return ret;
 }
 
-const cachedTextDecoder = new TextDecoder('utf-8', {
+const cachedTextDecoder = new TextDecoder({
   ignoreBOM: true,
   fatal: true,
 });
